@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel = "tests" name="All Test Suite">
+    <listeners>
+        <listener class-name="TestComponents.Listeners"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="C:/Users/manpr/eclipse-workspace/_SuiteCRM">
+        <classes>
+            <class name="FreeRunTests.EndToEnd">
+                <methods>
+                    <include name="endToEnd"/>
+                </methods>
+            </class>
+            <class name="Tests.ErrorValidationsTest">
+                <methods>
+                    <include name="checkLogo"/>
+                    <include name="checkLoginFunctionalityWithInvalidCredentials"/>
+                    <include name="checkLoginFunctionalityWithValidCredentials"/>
+                    <include name="verifyAccountCreation"/>
+                    <include name="verifySuccessfulLogout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
